@@ -1,0 +1,46 @@
+services:
+  - type: web
+    name: laravel-app
+    runtime: docker
+    region: oregon
+    plan: free
+    healthCheckPath: /
+    healthCheckProtocol: HTTP
+    maxInstanceCount: 1
+    minInstanceCount: 1
+
+    # Environment variables
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: "false"
+      - key: LOG_CHANNEL
+        value: stderr
+      - key: APP_KEY
+        scope: build
+      - key: DB_HOST
+        value: ${DATABASE_URL}
+      - key: DB_CONNECTION
+        value: mysql
+
+    # Port configuration for Render
+    port: 8080
+
+    # Auto-deploy on push
+    deploy:
+      fromRepo:
+        branch: main  # Change to your main branch name
+
+  # Optional: PostgreSQL database service
+  - type: pserv
+    name: laravel-db
+    ipAllowList: []
+    plan: free
+    region: oregon
+    dbName: laravel
+    user: postgres
+    postgresSQLVersion: 15
+    preDeployCommand: ""
+    maxInstanceCount: 1
+    minInstanceCount: 1

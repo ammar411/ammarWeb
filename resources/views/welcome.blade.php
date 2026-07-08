@@ -85,9 +85,24 @@
                 </nav>
                 <!-- Main Menu End-->
             </div>
-            
+
             <!-- Menu Button -->
-            <div class="menu-btns">
+            <div class="menu-btns d-flex align-items-center gap-3">
+                <!-- AI Model Selector -->
+                <div class="ai-model-selector">
+                    <button class="ai-selector-btn" id="aiSelectorToggle" title="Select AI Model">
+                        <i class="bi bi-brain"></i>
+                    </button>
+                    <div class="ai-selector-dropdown" id="aiSelectorDropdown">
+                        <button class="ai-model-option" data-model="all" title="Show all services">All Models</button>
+                        <button class="ai-model-option" data-model="tensorflow" title="TensorFlow">TensorFlow</button>
+                        <button class="ai-model-option" data-model="pytorch" title="PyTorch">PyTorch</button>
+                        <button class="ai-model-option" data-model="opencv" title="OpenCV">OpenCV</button>
+                        <button class="ai-model-option" data-model="data-science" title="Data Science">NumPy/Pandas</button>
+                        <button class="ai-model-option" data-model="face-recognition" title="Face Recognition">Face Recognition</button>
+                    </div>
+                </div>
+
                 <!-- menu sidbar -->
                 <div class="menu-sidebar">
                     <button>
@@ -380,7 +395,7 @@
         </div>
         <div class="row">
             <div class="col-lg-6">
-                <div class="service-item wow fadeInUp delay-0-2s">
+                <div class="service-item wow fadeInUp delay-0-2s" data-ai-models="all">
                     <div class="number">01.</div>
                     <div class="content">
                         <h4>Full-Stack Web Development</h4>
@@ -390,7 +405,7 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="service-item wow fadeInUp delay-0-4s">
+                <div class="service-item wow fadeInUp delay-0-4s" data-ai-models="all">
                     <div class="number">02.</div>
                     <div class="content">
                         <h4>Frontend Development</h4>
@@ -400,7 +415,7 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="service-item wow fadeInUp delay-0-2s">
+                <div class="service-item wow fadeInUp delay-0-2s" data-ai-models="all">
                     <div class="number">03.</div>
                     <div class="content">
                         <h4>Backend Development</h4>
@@ -410,7 +425,7 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="service-item wow fadeInUp delay-0-4s">
+                <div class="service-item wow fadeInUp delay-0-4s" data-ai-models="all">
                     <div class="number">04.</div>
                     <div class="content">
                         <h4>Agile Software Engineering</h4>
@@ -420,8 +435,7 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="service-item wow fadeInUp delay-0-2s">
-                    <div class="number">05.</div>
+                <div class="service-item wow fadeInUp delay-0-2s" data-ai-models="all">
                    <div class="content">
     <h4>PEST Testing & AWS Cloud Services</h4>
     <p>Automated testing with PEST for reliable Laravel applications, and scalable cloud solutions using AWS for secure deployments.</p>
@@ -431,11 +445,62 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="service-item wow fadeInUp delay-0-4s">
+                <div class="service-item wow fadeInUp delay-0-4s" data-ai-models="all">
                     <div class="number">06.</div>
                     <div class="content">
                         <h4>Database Design & Management</h4>
                         <p>Optimized SQL databases with efficient schema design, queries, and integrations for data-driven applications.</p>
+                    </div>
+                    <a href="service-details.html" class="details-btn"><i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <!-- AI Services -->
+            <div class="col-lg-6">
+                <div class="service-item wow fadeInUp delay-0-2s" data-ai-models="tensorflow,pytorch">
+                    <div class="number">07.</div>
+                    <div class="content">
+                        <h4>AI Model Training & Fine-tuning</h4>
+                        <p>Custom machine learning model training using TensorFlow and PyTorch for your specific use cases, with optimization and deployment support.</p>
+                    </div>
+                    <a href="service-details.html" class="details-btn"><i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="service-item wow fadeInUp delay-0-4s" data-ai-models="opencv">
+                    <div class="number">08.</div>
+                    <div class="content">
+                        <h4>Computer Vision Integration</h4>
+                        <p>Image processing and real-time vision solutions using OpenCV. Build powerful visual recognition and analysis systems.</p>
+                    </div>
+                    <a href="service-details.html" class="details-btn"><i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="service-item wow fadeInUp delay-0-2s" data-ai-models="face-recognition">
+                    <div class="number">09.</div>
+                    <div class="content">
+                        <h4>Face Recognition Systems</h4>
+                        <p>Biometric authentication and identification systems. Implement advanced face detection, recognition, and verification features.</p>
+                    </div>
+                    <a href="service-details.html" class="details-btn"><i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="service-item wow fadeInUp delay-0-4s" data-ai-models="data-science">
+                    <div class="number">10.</div>
+                    <div class="content">
+                        <h4>Data Processing & Analysis</h4>
+                        <p>Data pipeline creation and ML data preparation using NumPy and Pandas. Transform raw data into insights for machine learning.</p>
+                    </div>
+                    <a href="service-details.html" class="details-btn"><i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="service-item wow fadeInUp delay-0-2s" data-ai-models="tensorflow,pytorch">
+                    <div class="number">11.</div>
+                    <div class="content">
+                        <h4>AI-Powered Backend Integration</h4>
+                        <p>Seamlessly integrate machine learning models into your web applications. Build intelligent backends with API endpoints for AI predictions.</p>
                     </div>
                     <a href="service-details.html" class="details-btn"><i class="fas fa-arrow-right"></i></a>
                 </div>
@@ -526,6 +591,118 @@
                                     <i class="bi bi-database fs-1"></i>
                                     <h5>Backend</h5>
                                     <span class="percent">89%</span>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-3 col-sm-4 col-6">
+                                <div class="skill-item wow fadeInUp delay-0-2s">
+                                    <i class="bi bi-brain fs-1"></i>
+                                    <h5>TensorFlow</h5>
+                                    <span class="percent">85%</span>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-3 col-sm-4 col-6">
+                                <div class="skill-item wow fadeInUp delay-0-3s">
+                                    <i class="bi bi-lightning fs-1"></i>
+                                    <h5>PyTorch</h5>
+                                    <span class="percent">82%</span>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-3 col-sm-4 col-6">
+                                <div class="skill-item wow fadeInUp delay-0-4s">
+                                    <i class="bi bi-graph-up fs-1"></i>
+                                    <h5>NumPy/Pandas</h5>
+                                    <span class="percent">87%</span>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-3 col-sm-4 col-6">
+                                <div class="skill-item wow fadeInUp delay-0-5s">
+                                    <i class="bi bi-image fs-1"></i>
+                                    <h5>OpenCV</h5>
+                                    <span class="percent">84%</span>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-3 col-sm-4 col-6">
+                                <div class="skill-item wow fadeInUp delay-0-2s">
+                                    <i class="bi bi-person-check fs-1"></i>
+                                    <h5>Face Recognition</h5>
+                                    <span class="percent">86%</span>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-3 col-sm-4 col-6">
+                                <div class="skill-item wow fadeInUp delay-0-3s">
+                                    <i class="bi bi-gear fs-1"></i>
+                                    <h5>React.js</h5>
+                                    <span class="percent">91%</span>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-3 col-sm-4 col-6">
+                                <div class="skill-item wow fadeInUp delay-0-4s">
+                                    <i class="bi bi-type fs-1"></i>
+                                    <h5>TypeScript</h5>
+                                    <span class="percent">88%</span>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-3 col-sm-4 col-6">
+                                <div class="skill-item wow fadeInUp delay-0-5s">
+                                    <i class="bi bi-phone fs-1"></i>
+                                    <h5>Flutter</h5>
+                                    <span class="percent">80%</span>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-3 col-sm-4 col-6">
+                                <div class="skill-item wow fadeInUp delay-0-2s">
+                                    <i class="bi bi-braces-asterisk fs-1"></i>
+                                    <h5>Dart</h5>
+                                    <span class="percent">79%</span>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-3 col-sm-4 col-6">
+                                <div class="skill-item wow fadeInUp delay-0-3s">
+                                    <i class="bi bi-cup-straw fs-1"></i>
+                                    <h5>Java</h5>
+                                    <span class="percent">83%</span>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-3 col-sm-4 col-6">
+                                <div class="skill-item wow fadeInUp delay-0-4s">
+                                    <i class="bi bi-collection fs-1"></i>
+                                    <h5>Livewire</h5>
+                                    <span class="percent">88%</span>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-3 col-sm-4 col-6">
+                                <div class="skill-item wow fadeInUp delay-0-5s">
+                                    <i class="bi bi-git fs-1"></i>
+                                    <h5>Git/GitHub</h5>
+                                    <span class="percent">94%</span>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-3 col-sm-4 col-6">
+                                <div class="skill-item wow fadeInUp delay-0-2s">
+                                    <i class="bi bi-eyedropper fs-1"></i>
+                                    <h5>Figma</h5>
+                                    <span class="percent">89%</span>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-3 col-sm-4 col-6">
+                                <div class="skill-item wow fadeInUp delay-0-3s">
+                                    <i class="bi bi-filetype-json fs-1"></i>
+                                    <h5>JSON/REST</h5>
+                                    <span class="percent">96%</span>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-3 col-sm-4 col-6">
+                                <div class="skill-item wow fadeInUp delay-0-4s">
+                                    <i class="bi bi-diagram-2 fs-1"></i>
+                                    <h5>OOP/DSA</h5>
+                                    <span class="percent">93%</span>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-3 col-sm-4 col-6">
+                                <div class="skill-item wow fadeInUp delay-0-5s">
+                                    <i class="bi bi-code-square fs-1"></i>
+                                    <h5>PHP/MySQL</h5>
+                                    <span class="percent">93%</span>
                                 </div>
                             </div>
                         </div>

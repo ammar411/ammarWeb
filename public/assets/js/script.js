@@ -45,9 +45,70 @@
             }
         }
         headerStyle();
-        
-        
-        // ## Dropdown menu
+
+
+        // ## AI Model Selector Toggle and Filtering
+        (function() {
+            var savedModel = localStorage.getItem('aiModelSelection') || 'all';
+
+            // Initialize selector on page load
+            initializeAISelector(savedModel);
+
+            // Toggle dropdown
+            $('#aiSelectorToggle').on('click', function(e) {
+                e.preventDefault();
+                $('#aiSelectorDropdown').toggleClass('active');
+            });
+
+            // Select model option
+            $('.ai-model-option').on('click', function(e) {
+                e.preventDefault();
+                var model = $(this).attr('data-model');
+                localStorage.setItem('aiModelSelection', model);
+                initializeAISelector(model);
+                $('#aiSelectorDropdown').removeClass('active');
+            });
+
+            // Close dropdown when clicking outside
+            $(document).on('click', function(e) {
+                if (!$(e.target).closest('.ai-model-selector').length) {
+                    $('#aiSelectorDropdown').removeClass('active');
+                }
+            });
+
+            function initializeAISelector(model) {
+                // Update active button in dropdown
+                $('.ai-model-option').removeClass('active');
+                $('.ai-model-option[data-model="' + model + '"]').addClass('active');
+
+                // Filter services
+                filterServicesByModel(model);
+            }
+
+            function filterServicesByModel(model) {
+                var services = $('.service-item');
+
+                if (model === 'all') {
+                    services.fadeIn(300);
+                    services.removeClass('filtered-out');
+                } else {
+                    services.each(function() {
+                        var $service = $(this);
+                        var serviceModels = $service.attr('data-ai-models');
+
+                        if (serviceModels && serviceModels.includes(model)) {
+                            $service.fadeIn(300);
+                            $service.removeClass('filtered-out');
+                        } else {
+                            $service.fadeOut(300);
+                            $service.addClass('filtered-out');
+                        }
+                    });
+                }
+            }
+        })();
+
+
         var mobileWidth = 992;
         var navcollapse = $('.navigation li.dropdown');
 
