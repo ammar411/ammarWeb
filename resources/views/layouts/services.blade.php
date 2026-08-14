@@ -1,0 +1,353 @@
+@extends('layouts.app') 
+
+@section('title', 'Services')  
+
+<div>
+
+<div class="page-wrapper">
+ <!-- Preloader -->
+        <div class="preloader"></div>
+
+        <!-- main header -->
+        <header class="main-header menu-absolute">
+            <!--Header-Upper-->
+            <div class="header-upper">
+    <div class="container container-1620 clearfix">
+
+        <div class="header-inner rel d-flex align-items-center">
+            <div class="logo-outer">
+                <div class="logo">
+                    <a href="{{ url('/') }}">
+                       <h2>Portfolio</h2>
+                    </a>
+                </div>
+            </div>
+
+            <div class="nav-outer clearfix mx-auto">
+                <!-- Main Menu -->
+                <nav class="main-menu navbar-expand-lg">
+                    <div class="navbar-header">
+                        <div class="mobile-logo my-15">
+                            <a href="{{ url('/') }}">
+                                <img src="{{ asset('assets/images/logos/logo.png') }}" alt="Logo" title="Logo">
+                            </a>
+                        </div>
+                        
+                        <!-- Toggle Button -->
+                        <button type="button" class="navbar-toggle me-4" data-bs-toggle="collapse" data-bs-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+
+                    <div class="navbar-collapse collapse clearfix">
+                        <ul class="navigation clearfix">
+                            <li class="dropdown"><a href="{{ url('/') }}">Home</a>
+                                <!-- <ul>
+                                    <li class="dropdown"><a href="#">MultiPage</a>
+                                        <ul>
+                                            <li><a href="{{ url('/') }}">Home One</a></li>
+                                            <li><a href="{{ url('index2') }}">Home Two</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a href="#">OnePage</a>
+                                        <ul>
+                                            <li><a href="{{ url('indexonepage') }}">Home One</a></li>
+                                            <li><a href="{{ url('index2onepage') }}">Home Two</a></li>
+                                        </ul>
+                                    </li>
+                                </ul> -->
+                            </li>
+                            <li><a href="{{ url('about') }}">about</a></li>
+                            <li><a href="{{ url('services') }}">services</a></li>
+                            <!-- <li class="dropdown"><a href="#">projects</a>
+                                <ul>
+                                    <li><a href="{{ url('projects') }}">project Grid</a></li>
+                                    <li><a href="{{ url('projects-masonry') }}">projects masonry</a></li>
+                                    <li><a href="{{ url('project-details') }}">projects details</a></li>
+                                </ul>
+                            </li> -->
+                            <!-- <li class="dropdown"><a href="#">blog</a>
+                                <ul>
+                                    <li><a href="{{ url('blog') }}">blog standard</a></li>
+                                    <li><a href="{{ url('blog-details') }}">blog details</a></li>
+                                </ul>
+                            </li> -->
+                            <!-- <li class="dropdown"><a href="#">pages</a>
+                                <ul>
+                                    <li><a href="{{ url('404') }}">Error Page</a></li>
+                                </ul>
+                            </li> -->
+                            <li><a href="{{ url('contact') }}">Contact</a></li>
+                        </ul>
+                    </div>
+
+                </nav>
+                <!-- Main Menu End-->
+            </div>
+            
+            <!-- Menu Button -->
+            <div class="menu-btns">
+                <!-- menu sidbar -->
+                <div class="menu-sidebar">
+                    <button>
+                        <img src="{{ asset('assets/images/shape/sidebar-tottler.svg') }}" alt="Toggler">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+            <!--End Header Upper-->
+        </header>
+     
+        
+
+          <!-- Page Banner Start -->
+        <section class="page-banner-area pt-200 rpt-140 pb-100 rpb-60 rel z-1 text-center">
+            <div class="container">
+                <div class="banner-inner text-white">
+                    <h1 class="page-title wow fadeInUp delay-0-2s">Popular Service</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center wow fadeInUp delay-0-4s">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active">Popular Service</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <div class="bg-lines">
+               <span></span><span></span>
+               <span></span><span></span>
+               <span></span><span></span>
+               <span></span><span></span>
+               <span></span><span></span>
+            </div>
+        </section>
+        <!-- Page Banner End -->
+        
+        
+        <!-- What I Do Area start -->
+       <section class="what-i-do-area pt-25 rpt-0 pb-130 rpb-100 rel z-1">
+    <div class="container">
+        <div class="row align-items-center justify-content-between">
+            <!-- Images Section -->
+            <div class="col-lg-6">
+                <div class="what-i-do-images rmb-55 wow fadeInUp delay-0-2s">
+                    <div class="first-image">
+                        <img src="assets/images/about/what-i-do1.png" alt="Web Development">
+                    </div>
+                    <div class="last-image">
+                        <img src="assets/images/about/what-i-do2.png" alt="UI/UX Design">
+                    </div>
+                    <div class="icon first"><i class="flaticon-code"></i></div>
+                    <div class="icon last"><i class="flaticon-design"></i></div>
+                </div>
+            </div>
+
+            <!-- Content Section -->
+            <div class="col-xl-5 col-lg-6">
+                <div class="what-i-do-content wow fadeInUp delay-0-4s">
+                    <div class="section-title mb-40">
+                        <span class="sub-title mb-15">What I Do</span>
+                        <h2>Building <span>Modern Websites</span> & Applications</h2>
+                        <p>
+                            I’m a Software Engineer with hands-on experience in 
+                            <strong>Frontend & Full-Stack Development</strong>. 
+                            I focus on creating responsive, scalable, and user-friendly 
+                            web applications using technologies like <strong>HTML, CSS, JavaScript, React, PHP, Laravel, and MySQL</strong>. 
+                            I also design intuitive UI/UX and explore <strong>Flutter</strong> for mobile app development.
+                        </p>
+                    </div>
+
+                    <!-- Skills List -->
+                    <ul class="list-style-two pb-50">
+                        <li>2+ Years of Experience in Web Development</li>
+                        <li>Frontend Skills: HTML, CSS, JavaScript, React</li>
+                        <li>Backend & Database: PHP, Laravel, MySQL</li>
+                        <li>UI/UX Design: Figma, Photoshop, Canva</li>
+                        <li>Exploring Mobile Apps with Flutter</li>
+                        <li>Project Management & Agile SDLC</li>
+                    </ul>
+
+                    <a href="{{ url('about') }}" class="theme-btn">Learn More <i class="far fa-angle-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Lines -->
+    <div class="bg-lines">
+        <span></span><span></span>
+        <span></span><span></span>
+        <span></span><span></span>
+        <span></span><span></span>
+        <span></span><span></span>
+    </div>
+</section>
+
+        <!-- What I Do Area end -->
+        
+          <section class="services-area pt-130 rpt-100 pb-100 rpb-70 rel z-1">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-8">
+                <div class="section-title text-center mb-60 wow fadeInUp delay-0-2s">
+                    <span class="sub-title mb-15">Popular Services</span>
+                    <h2>My <span>Special Service</span> For Your Business Development</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="service-item wow fadeInUp delay-0-2s">
+                    <div class="number">01.</div>
+                    <div class="content">
+                        <h4>Full-Stack Web Development</h4>
+                        <p>End-to-end web solutions using Laravel, PHP, React, and MySQL for scalable, secure, and modern applications.</p>
+                    </div>
+                    <a href="service-details.html" class="details-btn"><i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="service-item wow fadeInUp delay-0-4s">
+                    <div class="number">02.</div>
+                    <div class="content">
+                        <h4>Frontend Development</h4>
+                        <p>Responsive, user-friendly interfaces with React, Bootstrap, Tailwind CSS, Vue.js, JavaScript, HTML, and CSS to deliver engaging digital experiences.</p>
+                    </div>
+                    <a href="service-details.html" class="details-btn"><i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="service-item wow fadeInUp delay-0-2s">
+                    <div class="number">03.</div>
+                    <div class="content">
+                        <h4>Backend Development</h4>
+                        <p>Robust backend systems using Laravel, PHP, and MySQL with REST APIs for secure and efficient data handling.</p>
+                    </div>
+                    <a href="service-details.html" class="details-btn"><i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="service-item wow fadeInUp delay-0-4s">
+                    <div class="number">04.</div>
+                    <div class="content">
+                        <h4>Agile Software Engineering</h4>
+                        <p>Delivering high-quality projects through Agile methodologies, SDLC practices, and continuous integration.</p>
+                    </div>
+                    <a href="service-details.html" class="details-btn"><i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="service-item wow fadeInUp delay-0-2s">
+                    <div class="number">05.</div>
+                   <div class="content">
+    <h4>PEST Testing & AWS Cloud Services</h4>
+    <p>Automated testing with PEST for reliable Laravel applications, and scalable cloud solutions using AWS for secure deployments.</p>
+</div>
+
+                    <a href="service-details.html" class="details-btn"><i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="service-item wow fadeInUp delay-0-4s">
+                    <div class="number">06.</div>
+                    <div class="content">
+                        <h4>Database Design & Management</h4>
+                        <p>Optimized SQL databases with efficient schema design, queries, and integrations for data-driven applications.</p>
+                    </div>
+                    <a href="service-details.html" class="details-btn"><i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-lines">
+       <span></span><span></span>
+       <span></span><span></span>
+       <span></span><span></span>
+       <span></span><span></span>
+       <span></span><span></span>
+    </div>
+</section>
+
+        <footer class="main-footer rel z-1">
+            <div class="footer-top-wrap bgc-black pt-100 pb-75">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-2 col-md-12">
+                            <div class="footer-widget widget_logo wow fadeInUp delay-0-2s">
+                                <div class="footer-logo">
+                                    <a href="index.html"><img src="assets/images/logos/logo.png" alt="Logo"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-md-7">
+                            <div class="footer-widget widget_nav_menu wow fadeInUp delay-0-4s">
+                                <h6 class="footer-title">Quick Link</h6>
+                                <ul>
+                                    <li><a href="#">Service</a></li>
+                                    <li><a href="#">Projects</a></li>
+                                    <li><a href="#">Pricing</a></li>
+                                    <li><a href="#">Faqs</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer-widget widget_newsletter wow fadeInUp delay-0-4s">
+                                <form action="#">
+                                    <label for="email-address"><i class="far fa-envelope"></i></label>
+                                    <input id="email-address" type="email" placeholder="Email Address" required>
+                                    <button>Sign Up <i class="far fa-angle-right"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-5">
+                            <div class="footer-widget widget_contact_info wow fadeInUp delay-0-6s">
+                                <h6 class="footer-title">Address</h6>
+                                <ul>
+                                    <li><i class="far fa-map-marker-alt"></i>Pakistan</li>
+                                    <li><i class="far fa-envelope"></i> <a href="mailto:support@gmail.com">ammarmalik046@gmail.com</a></li>
+                                    <li><i class="far fa-phone"></i> <a href="callto:+880(123)45688">+923345865096</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom pt-20 pb-5 rpt-25">
+                <div class="container">
+                   <div class="row">
+                       <div class="col-lg-6">
+                            <div class="copyright-text">
+                                <p>Copyright @2025, <a href="#">Ammar's Portfolio</a> All Rights Reserved</p>
+                            </div>
+                       </div>
+                       <div class="col-lg-6 text-lg-end">
+                           <ul class="footer-bottom-nav">
+                               <li><a href="#">Facebook</a></li>
+                               <li><a href="#">Twitter</a></li>
+                               <li><a href="#">Instagram</a></li>
+                               <li><a href="#">LinkedIn</a></li>
+                           </ul>
+                       </div>
+                   </div>
+                   <!-- Scroll Top Button -->
+                    <button class="scroll-top scroll-to-target" data-target="html"><span class="fas fa-angle-double-up"></span></button>
+                </div>
+                <div class="bg-lines">
+                   <span></span><span></span>
+                   <span></span><span></span>
+                   <span></span><span></span>
+                   <span></span><span></span>
+                   <span></span><span></span>
+                </div>
+            </div>
+        </footer>
+</div>
+
+
+</div>
+
+@endsection
