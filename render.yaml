@@ -5,11 +5,6 @@ services:
     region: oregon
     plan: free
     healthCheckPath: /
-    healthCheckProtocol: HTTP
-    maxInstanceCount: 1
-    minInstanceCount: 1
-
-    # Environment variables (set APP_KEY in Render dashboard)
     envVars:
       - key: APP_ENV
         value: production
@@ -21,11 +16,5 @@ services:
         value: sqlite
       - key: DB_DATABASE
         value: /var/www/html/database/database.sqlite
-
-    # Port configuration for Render
-    port: 8080
-
-    # Auto-deploy on push
-    deploy:
-      fromRepo:
-        branch: main
+      - key: PORT
+        value: "8080"
