@@ -1,7 +1,37 @@
-@extends('layouts.app') 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ammar's Portfolio </title>
+    <meta name="csrf-token" content="">
 
-@section('content')
-<div>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Favicon Icon -->
+    <link rel="shortcut icon" href="http://localhost:8000/assets/images/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="http://localhost:8000/assets/css/magnific-popup.min.css">
+
+
+    <!-- Flaticon -->
+    <link rel="stylesheet" href="http://localhost:8000/assets/css/flaticon.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="http://localhost:8000/assets/css/fontawesome-5.14.0.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="http://localhost:8000/assets/css/bootstrap.min.css">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="http://localhost:8000/assets/css/magnific-popup.min.css">
+    <!-- Nice Select -->
+    <link rel="stylesheet" href="http://localhost:8000/assets/css/nice-select.min.css">
+    <!-- Animate -->
+    <link rel="stylesheet" href="http://localhost:8000/assets/css/animate.min.css">
+    <!-- Slick -->
+    <link rel="stylesheet" href="http://localhost:8000/assets/css/slick.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="http://localhost:8000/assets/css/style.css">
+</head>
+<body class="home-one">
+
+    <div>
     <div>
      <div class="page-wrapper">
 
@@ -17,7 +47,7 @@
         <div class="header-inner rel d-flex align-items-center">
             <div class="logo-outer">
                 <div class="logo">
-                    <a href="{{ url('/') }}">
+                    <a href="http://localhost:8000">
                        <h2>Portfolio</h2>
                     </a>
                 </div>
@@ -28,8 +58,8 @@
                 <nav class="main-menu navbar-expand-lg">
                     <div class="navbar-header">
                         <div class="mobile-logo my-15">
-                            <a href="{{ url('/') }}">
-                                <img src="{{ asset('assets/images/logos/logo.png') }}" alt="Logo" title="Logo">
+                            <a href="http://localhost:8000">
+                                <img src="http://localhost:8000/assets/images/logos/logo.png" alt="Logo" title="Logo">
                             </a>
                         </div>
                         
@@ -43,10 +73,10 @@
 
                     <div class="navbar-collapse collapse clearfix">
                         <ul class="navigation clearfix">
-                            <li class="dropdown"><a href="{{ url('/') }}">Home</a></li>
-                            <li><a href="{{ url('about') }}">about</a></li>
-                            <li><a href="{{ url('services') }}">services</a></li>
-                            <li><a href="{{ url('contact') }}">Contact</a></li>
+                            <li class="dropdown"><a href="http://localhost:8000">Home</a></li>
+                            <li><a href="http://localhost:8000/about">about</a></li>
+                            <li><a href="http://localhost:8000/services">services</a></li>
+                            <li><a href="http://localhost:8000/contact">Contact</a></li>
                         </ul>
                     </div>
 
@@ -59,7 +89,7 @@
                 <!-- menu sidbar -->
                 <div class="menu-sidebar">
                     <button>
-                        <img src="{{ asset('assets/images/shape/sidebar-tottler.svg') }}" alt="Toggler">
+                        <img src="http://localhost:8000/assets/images/shape/sidebar-tottler.svg" alt="Toggler">
                     </button>
                 </div>
             </div>
@@ -117,7 +147,7 @@
                     <h1 class="page-title wow fadeInUp delay-0-2s">Reach Out </h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center wow fadeInUp delay-0-4s">
-                            <li class="breadcrumb-item"><a href="{{ url('/') }}">Home</a></li>
+                            <li class="breadcrumb-item"><a href="http://localhost:8000">Home</a></li>
                             <li class="breadcrumb-item active">Contact</li>
                         </ol>
                     </nav>
@@ -137,19 +167,7 @@
         <!-- Contact Page Area start -->
         <section class="contact-page pt-40 pb-130 rpb-100 rel z-1">
             <div class="container">
-                @if (session('success'))
-                    <div class="alert alert-success alert-dismissible fade show" role="alert">
-                        {{ session('success') }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                @endif
-                @if (session('error'))
-                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                        {{ session('error') }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                @endif
-
+                                
                 <div class="row align-items-center">
                     <div class="col-lg-4">
                         <div class="contact-page-content rmb-55 wow fadeInUp delay-0-2s">
@@ -276,7 +294,7 @@
                    <div class="row">
                        <div class="col-lg-6">
                             <div class="copyright-text">
-                                <p>Copyright @2025, <a href="{{ url('/') }}">Ammar Portfolio</a> All Rights Reserved</p>
+                                <p>Copyright @2025, <a href="http://localhost:8000">Ammar Portfolio</a> All Rights Reserved</p>
                             </div>
                        </div>
                        <div class="col-lg-6 text-lg-end">
@@ -302,4 +320,30 @@
     </div>
 </div>
 </div>
-@endsection
+
+    <!-- Jquery -->
+    <script src="http://localhost:8000/assets/js/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="http://localhost:8000/assets/js/bootstrap.min.js"></script>
+    <!-- Appear Js -->
+    <script src="http://localhost:8000/assets/js/appear.min.js"></script>
+    <!-- Slick -->
+    <script src="http://localhost:8000/assets/js/slick.min.js"></script>
+    <!-- Nice Select -->
+    <script src="http://localhost:8000/assets/js/jquery.nice-select.min.js"></script>
+    <!-- Image Loader -->
+    <script src="http://localhost:8000/assets/js/imagesloaded.pkgd.min.js"></script>
+    <!-- Isotope -->
+    <script src="http://localhost:8000/assets/js/isotope.pkgd.min.js"></script>
+    <!-- WOW Animation -->
+    <script src="http://localhost:8000/assets/js/wow.min.js"></script>
+    <!-- Custom script -->
+    <script src="http://localhost:8000/assets/js/script.js"></script>
+
+    <!-- For Contact Form -->
+    <script src="http://localhost:8000/assets/js/jquery.ajaxchimp.min.js"></script>
+    <script src="http://localhost:8000/assets/js/form-validator.min.js"></script>
+    <script src="http://localhost:8000/assets/js/contact-form-script.js"></script>
+    <script src="http://localhost:8000/assets/js/magnific-popup.min.js"></script>
+</body>
+</html>

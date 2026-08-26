@@ -1,7 +1,37 @@
-@extends('layouts.app') 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ammar's Portfolio </title>
+    <meta name="csrf-token" content="">
 
-@section('content')
-   <div>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Favicon Icon -->
+    <link rel="shortcut icon" href="http://localhost:8000/assets/images/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="http://localhost:8000/assets/css/magnific-popup.min.css">
+
+
+    <!-- Flaticon -->
+    <link rel="stylesheet" href="http://localhost:8000/assets/css/flaticon.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="http://localhost:8000/assets/css/fontawesome-5.14.0.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="http://localhost:8000/assets/css/bootstrap.min.css">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="http://localhost:8000/assets/css/magnific-popup.min.css">
+    <!-- Nice Select -->
+    <link rel="stylesheet" href="http://localhost:8000/assets/css/nice-select.min.css">
+    <!-- Animate -->
+    <link rel="stylesheet" href="http://localhost:8000/assets/css/animate.min.css">
+    <!-- Slick -->
+    <link rel="stylesheet" href="http://localhost:8000/assets/css/slick.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="http://localhost:8000/assets/css/style.css">
+</head>
+<body class="home-one">
+
+       <div>
     <div class="page-wrapper">
 
         <!-- Preloader -->
@@ -16,7 +46,7 @@
         <div class="header-inner rel d-flex align-items-center">
             <div class="logo-outer">
                 <div class="logo">
-                    <a href="{{ url('/') }}">
+                    <a href="http://localhost:8000">
                        <h2>Portfolio</h2>
                     </a>
                 </div>
@@ -27,8 +57,8 @@
                 <nav class="main-menu navbar-expand-lg">
                     <div class="navbar-header">
                         <div class="mobile-logo my-15">
-                            <a href="{{ url('/') }}">
-                                <img src="{{ asset('assets/images/logos/logo.png') }}" alt="Logo" title="Logo">
+                            <a href="http://localhost:8000">
+                                <img src="http://localhost:8000/assets/images/logos/logo.png" alt="Logo" title="Logo">
                             </a>
                         </div>
                         
@@ -42,43 +72,43 @@
 
                     <div class="navbar-collapse collapse clearfix">
                         <ul class="navigation clearfix">
-                            <li class="dropdown"><a href="{{ url('/') }}">Home</a>
+                            <li class="dropdown"><a href="http://localhost:8000">Home</a>
                                 <!-- <ul>
                                     <li class="dropdown"><a href="#">MultiPage</a>
                                         <ul>
-                                            <li><a href="{{ url('/') }}">Home One</a></li>
-                                            <li><a href="{{ url('index2') }}">Home Two</a></li>
+                                            <li><a href="http://localhost:8000">Home One</a></li>
+                                            <li><a href="http://localhost:8000/index2">Home Two</a></li>
                                         </ul>
                                     </li>
                                     <li class="dropdown"><a href="#">OnePage</a>
                                         <ul>
-                                            <li><a href="{{ url('indexonepage') }}">Home One</a></li>
-                                            <li><a href="{{ url('index2onepage') }}">Home Two</a></li>
+                                            <li><a href="http://localhost:8000/indexonepage">Home One</a></li>
+                                            <li><a href="http://localhost:8000/index2onepage">Home Two</a></li>
                                         </ul>
                                     </li>
                                 </ul> -->
                             </li>
-                            <li><a href="{{ url('about') }}">about</a></li>
-                            <li><a href="{{ url('services') }}">services</a></li>
+                            <li><a href="http://localhost:8000/about">about</a></li>
+                            <li><a href="http://localhost:8000/services">services</a></li>
                             <!-- <li class="dropdown"><a href="#">projects</a>
                                 <ul>
-                                    <li><a href="{{ url('projects') }}">project Grid</a></li>
-                                    <li><a href="{{ url('projects-masonry') }}">projects masonry</a></li>
-                                    <li><a href="{{ url('project-details') }}">projects details</a></li>
+                                    <li><a href="http://localhost:8000/projects">project Grid</a></li>
+                                    <li><a href="http://localhost:8000/projects-masonry">projects masonry</a></li>
+                                    <li><a href="http://localhost:8000/project-details">projects details</a></li>
                                 </ul>
                             </li> -->
                             <!-- <li class="dropdown"><a href="#">blog</a>
                                 <ul>
-                                    <li><a href="{{ url('blog') }}">blog standard</a></li>
-                                    <li><a href="{{ url('blog-details') }}">blog details</a></li>
+                                    <li><a href="http://localhost:8000/blog">blog standard</a></li>
+                                    <li><a href="http://localhost:8000/blog-details">blog details</a></li>
                                 </ul>
                             </li> -->
                             <!-- <li class="dropdown"><a href="#">pages</a>
                                 <ul>
-                                    <li><a href="{{ url('404') }}">Error Page</a></li>
+                                    <li><a href="http://localhost:8000/404">Error Page</a></li>
                                 </ul>
                             </li> -->
-                            <li><a href="{{ url('contact') }}">Contact</a></li>
+                            <li><a href="http://localhost:8000/contact">Contact</a></li>
                         </ul>
                     </div>
 
@@ -106,7 +136,7 @@
                 <!-- menu sidbar -->
                 <div class="menu-sidebar">
                     <button>
-                        <img src="{{ asset('assets/images/shape/sidebar-tottler.svg') }}" alt="Toggler">
+                        <img src="http://localhost:8000/assets/images/shape/sidebar-tottler.svg" alt="Toggler">
                     </button>
                 </div>
             </div>
@@ -131,9 +161,8 @@
 
                 <!--Appointment Form-->
 <div class="appointment-form">
-    <form method="POST" action="{{route('send.appointment') }}">
-        @csrf
-        <div class="form-group">
+    <form method="POST" action="http://localhost:8000/send-appointment">
+        <input type="hidden" name="_token" value="" autocomplete="off">        <div class="form-group">
             <input type="text" name="name" placeholder="Name" required>
         </div>
         <div class="form-group">
@@ -147,10 +176,7 @@
         </div>
     </form>
 
-    @if(session('success'))
-        <p style="color: green;">{{ session('success') }}</p>
-    @endif
-</div>
+    </div>
 
 
 
@@ -177,8 +203,8 @@
                     <h1><b>Ammar Khalid</b> Software Engineer</h1>
                     <p>"Turning ideas into scalable and user-friendly applications."</p>
                     <div class="hero-btns">
-                        <a href="{{ url('contact') }}" class="theme-btn">Hire Me <i class="far fa-angle-right"></i></a>
-                        <a href="{{ url('contact') }}" class="read-more">Download Resume <i class="far fa-angle-right"></i></a>
+                        <a href="http://localhost:8000/contact" class="theme-btn">Hire Me <i class="far fa-angle-right"></i></a>
+                        <a href="http://localhost:8000/contact" class="read-more">Download Resume <i class="far fa-angle-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -201,9 +227,9 @@
             <div class="col-lg-5">
                 <div class="author-image-part wow fadeIn delay-0-3s">
                     <div class="bg-circle"></div>
-                    <img src="{{ asset('assets/images/hero/me2.png') }}" alt="Author">
+                    <img src="http://localhost:8000/assets/images/hero/me2.png" alt="Author">
                      <div class="progress-shape">
-                        <img src="{{ asset('assets/images/hero/progress-shape.png') }}" alt="Progress">
+                        <img src="http://localhost:8000/assets/images/hero/progress-shape.png" alt="Progress">
                     </div> 
                 </div>
             </div>
@@ -267,19 +293,19 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="about-image-part wow fadeInUp delay-0-3s">
-                        <img src="{{ asset('assets/images/hero/second.jpg') }}" alt="About Me">
+                        <img src="http://localhost:8000/assets/images/hero/second.jpg" alt="About Me">
                         <!-- <div class="about-btn btn-one wow fadeInRight delay-0-4s">
-                            <img src="{{ asset('assets/images/about/btn-image1.png') }}" alt="Image">
+                            <img src="http://localhost:8000/assets/images/about/btn-image1.png" alt="Image">
                             <h6>Experience Designer</h6>
                             <i class="fas fa-arrow-right"></i>
                         </div>
                         <div class="about-btn btn-two wow fadeInRight delay-0-5s">
-                            <img src="{{ asset('assets/images/about/btn-image2.png') }}" alt="Image">
+                            <img src="http://localhost:8000/assets/images/about/btn-image2.png" alt="Image">
                             <h6>Mark J. Collins</h6>
                             <i class="fas fa-arrow-right"></i>
                         </div> -->
                         <!-- <div class="dot-shape">
-                            <img src="{{ asset('assets/images/shape/about-dot.png') }}" alt="Shape">
+                            <img src="http://localhost:8000/assets/images/shape/about-dot.png" alt="Shape">
                         </div> -->
                     </div>
                 </div>
@@ -401,7 +427,7 @@
                         <h4>Full-Stack Web Development</h4>
                         <p>End-to-end web solutions using Laravel, PHP, React, and MySQL for scalable, secure, and modern applications.</p>
                     </div>
-                    <a href="{{ url('services') }}" class="details-btn"><i class="fas fa-arrow-right"></i></a>
+                    <a href="http://localhost:8000/services" class="details-btn"><i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -411,7 +437,7 @@
                         <h4>Frontend Development</h4>
                         <p>Responsive, user-friendly interfaces with React, Bootstrap, Tailwind CSS, Vue.js, JavaScript, HTML, and CSS to deliver engaging digital experiences.</p>
                     </div>
-                    <a href="{{ url('services') }}" class="details-btn"><i class="fas fa-arrow-right"></i></a>
+                    <a href="http://localhost:8000/services" class="details-btn"><i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -421,7 +447,7 @@
                         <h4>Backend Development</h4>
                         <p>Robust backend systems using Laravel, PHP, and MySQL with REST APIs for secure and efficient data handling.</p>
                     </div>
-                    <a href="{{ url('services') }}" class="details-btn"><i class="fas fa-arrow-right"></i></a>
+                    <a href="http://localhost:8000/services" class="details-btn"><i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -431,7 +457,7 @@
                         <h4>Agile Software Engineering</h4>
                         <p>Delivering high-quality projects through Agile methodologies, SDLC practices, and continuous integration.</p>
                     </div>
-                    <a href="{{ url('services') }}" class="details-btn"><i class="fas fa-arrow-right"></i></a>
+                    <a href="http://localhost:8000/services" class="details-btn"><i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -441,7 +467,7 @@
     <p>Automated testing with PEST for reliable Laravel applications, and scalable cloud solutions using AWS for secure deployments.</p>
 </div>
 
-                    <a href="{{ url('services') }}" class="details-btn"><i class="fas fa-arrow-right"></i></a>
+                    <a href="http://localhost:8000/services" class="details-btn"><i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -451,7 +477,7 @@
                         <h4>Database Design & Management</h4>
                         <p>Optimized SQL databases with efficient schema design, queries, and integrations for data-driven applications.</p>
                     </div>
-                    <a href="{{ url('services') }}" class="details-btn"><i class="fas fa-arrow-right"></i></a>
+                    <a href="http://localhost:8000/services" class="details-btn"><i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <!-- AI Services -->
@@ -462,7 +488,7 @@
                         <h4>AI Model Training & Fine-tuning</h4>
                         <p>Custom machine learning model training using TensorFlow and PyTorch for your specific use cases, with optimization and deployment support.</p>
                     </div>
-                    <a href="{{ url('services') }}" class="details-btn"><i class="fas fa-arrow-right"></i></a>
+                    <a href="http://localhost:8000/services" class="details-btn"><i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -472,7 +498,7 @@
                         <h4>Computer Vision Integration</h4>
                         <p>Image processing and real-time vision solutions using OpenCV. Build powerful visual recognition and analysis systems.</p>
                     </div>
-                    <a href="{{ url('services') }}" class="details-btn"><i class="fas fa-arrow-right"></i></a>
+                    <a href="http://localhost:8000/services" class="details-btn"><i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -482,7 +508,7 @@
                         <h4>Face Recognition Systems</h4>
                         <p>Biometric authentication and identification systems. Implement advanced face detection, recognition, and verification features.</p>
                     </div>
-                    <a href="{{ url('services') }}" class="details-btn"><i class="fas fa-arrow-right"></i></a>
+                    <a href="http://localhost:8000/services" class="details-btn"><i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -492,7 +518,7 @@
                         <h4>Data Processing & Analysis</h4>
                         <p>Data pipeline creation and ML data preparation using NumPy and Pandas. Transform raw data into insights for machine learning.</p>
                     </div>
-                    <a href="{{ url('services') }}" class="details-btn"><i class="fas fa-arrow-right"></i></a>
+                    <a href="http://localhost:8000/services" class="details-btn"><i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -502,7 +528,7 @@
                         <h4>AI-Powered Backend Integration</h4>
                         <p>Seamlessly integrate machine learning models into your web applications. Build intelligent backends with API endpoints for AI predictions.</p>
                     </div>
-                    <a href="{{ url('services') }}" class="details-btn"><i class="fas fa-arrow-right"></i></a>
+                    <a href="http://localhost:8000/services" class="details-btn"><i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -531,7 +557,7 @@
                             <h2>Let’s Explore Popular <span>Skills & Experience</span></h2>
                             <p>I specialize in modern software engineering — from frontend to backend, cloud services, and agile methodologies.</p>
                         </div>
-                        <a href="{{ url('about') }}" class="theme-btn">Learn More <i class="far fa-angle-right"></i></a>
+                        <a href="http://localhost:8000/about" class="theme-btn">Learn More <i class="far fa-angle-right"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-7">
@@ -743,9 +769,9 @@
                     <div class="col-xl-5 col-lg-6">
                         <div class="project-content wow fadeInRight delay-0-2s">
                             <span class="sub-title">Product Design</span>
-                            <h2><a href="{{ url('services') }}">Mobile Application Design</a></h2>
+                            <h2><a href="http://localhost:8000/services">Mobile Application Design</a></h2>
                             <p>Sed ut perspiciatis unde omnin natus totam rem aperiam eaque inventore veritatis architecto beatae</p>
-                            <a href="{{ url('services') }}" class="details-btn"><i class="far fa-arrow-right"></i></a>
+                            <a href="http://localhost:8000/services" class="details-btn"><i class="far fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -758,9 +784,9 @@
                     <div class="col-xl-5 col-lg-6 ms-auto">
                         <div class="project-content wow fadeInRight delay-0-2s">
                             <span class="sub-title">Product Design</span>
-                            <h2><a href="{{ url('services') }}">Website Makeup Design</a></h2>
+                            <h2><a href="http://localhost:8000/services">Website Makeup Design</a></h2>
                             <p>Sed ut perspiciatis unde omnin natus totam rem aperiam eaque inventore veritatis architecto beatae</p>
-                            <a href="{{ url('services') }}" class="details-btn"><i class="far fa-arrow-right"></i></a>
+                            <a href="http://localhost:8000/services" class="details-btn"><i class="far fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -773,9 +799,9 @@
                     <div class="col-xl-5 col-lg-6">
                         <div class="project-content wow fadeInRight delay-0-2s">
                             <span class="sub-title">Product Design</span>
-                            <h2><a href="{{ url('services') }}">Brand Identity and Motion Design</a></h2>
+                            <h2><a href="http://localhost:8000/services">Brand Identity and Motion Design</a></h2>
                             <p>Sed ut perspiciatis unde omnin natus totam rem aperiam eaque inventore veritatis architecto beatae</p>
-                            <a href="{{ url('services') }}" class="details-btn"><i class="far fa-arrow-right"></i></a>
+                            <a href="http://localhost:8000/services" class="details-btn"><i class="far fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -788,14 +814,14 @@
                     <div class="col-xl-5 col-lg-6 ms-auto">
                         <div class="project-content wow fadeInRight delay-0-2s">
                             <span class="sub-title">Product Design</span>
-                            <h2><a href="{{ url('services') }}">Mobile Application Development</a></h2>
+                            <h2><a href="http://localhost:8000/services">Mobile Application Development</a></h2>
                             <p>Sed ut perspiciatis unde omnin natus totam rem aperiam eaque inventore veritatis architecto beatae</p>
-                            <a href="{{ url('services') }}" class="details-btn"><i class="far fa-arrow-right"></i></a>
+                            <a href="http://localhost:8000/services" class="details-btn"><i class="far fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="project-btn text-center wow fadeInUp delay-0-2s">
-                    <a href="{{ url('services') }}" class="theme-btn">View More Projects <i class="far fa-angle-right"></i></a>
+                    <a href="http://localhost:8000/services" class="theme-btn">View More Projects <i class="far fa-angle-right"></i></a>
                 </div>
             </div>
             <div class="bg-lines">
@@ -913,7 +939,7 @@
                                     <li class="unable">Digital Marketing</li>
                                     <li class="unable">Custom Support</li>
                                 </ul>
-                                <a href="{{ url('contact') }}" class="theme-btn">Choose Package <i class="far fa-angle-right"></i></a>
+                                <a href="http://localhost:8000/contact" class="theme-btn">Choose Package <i class="far fa-angle-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -933,7 +959,7 @@
                                     <li>Digital Marketing</li>
                                     <li>Custom Support</li>
                                 </ul>
-                                <a href="{{ url('contact') }}" class="theme-btn">Choose Package <i class="far fa-angle-right"></i></a>
+                                <a href="http://localhost:8000/contact" class="theme-btn">Choose Package <i class="far fa-angle-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -953,7 +979,7 @@
                                     <li>Digital Marketing</li>
                                     <li>Custom Support</li>
                                 </ul>
-                                <a href="{{ url('contact') }}" class="theme-btn">Choose Package <i class="far fa-angle-right"></i></a>
+                                <a href="http://localhost:8000/contact" class="theme-btn">Choose Package <i class="far fa-angle-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1058,10 +1084,7 @@
 
     </form>
 
-    @if(session('success'))
-        <p class="text-success mt-2">{{ session('success') }}</p>
-    @endif
-</div>
+    </div>
 
 </div>
 
@@ -1098,10 +1121,10 @@
                                 </div>
                                 <div class="content">
                                     <div class="blog-meta mb-35">
-                                        <a class="tag" href="{{ url('about') }}">Design</a>
-                                        <a class="tag" href="{{ url('about') }}">Figma</a>
+                                        <a class="tag" href="http://localhost:8000/about">Design</a>
+                                        <a class="tag" href="http://localhost:8000/about">Figma</a>
                                     </div>
-                                    <h5><a href="{{ url('about') }}">Tips For Conductin See Usability Studies</a></h5>
+                                    <h5><a href="http://localhost:8000/about">Tips For Conductin See Usability Studies</a></h5>
                                     <hr>
                                     <div class="blog-meta mt-35">
                                         <a class="date" href="#"><i class="far fa-calendar-alt"></i> September 25, 2023</a>
@@ -1116,10 +1139,10 @@
                                 </div>
                                 <div class="content">
                                     <div class="blog-meta mb-35">
-                                        <a class="tag" href="{{ url('about') }}">Design</a>
-                                        <a class="tag" href="{{ url('about') }}">Figma</a>
+                                        <a class="tag" href="http://localhost:8000/about">Design</a>
+                                        <a class="tag" href="http://localhost:8000/about">Figma</a>
                                     </div>
-                                    <h5><a href="{{ url('about') }}">Keyboard-Only Suppor Assistive Technology</a></h5>
+                                    <h5><a href="http://localhost:8000/about">Keyboard-Only Suppor Assistive Technology</a></h5>
                                     <hr>
                                     <div class="blog-meta mt-35">
                                         <a class="date" href="#"><i class="far fa-calendar-alt"></i> September 25, 2023</a>
@@ -1151,34 +1174,34 @@
                     </div>
                 </div>
                 <div class="client-logo-wrap">
-                    <a class="client-logo-item wow fadeInUp delay-0-2s" href="{{ url('contact') }}">
+                    <a class="client-logo-item wow fadeInUp delay-0-2s" href="http://localhost:8000/contact">
                         <img src="assets/images/client-logos/client-logo1.png" alt="Client Logo">
                     </a>
-                    <a class="client-logo-item wow fadeInUp delay-0-3s" href="{{ url('contact') }}">
+                    <a class="client-logo-item wow fadeInUp delay-0-3s" href="http://localhost:8000/contact">
                         <img src="assets/images/client-logos/client-logo2.png" alt="Client Logo">
                     </a>
-                    <a class="client-logo-item wow fadeInUp delay-0-4s" href="{{ url('contact') }}">
+                    <a class="client-logo-item wow fadeInUp delay-0-4s" href="http://localhost:8000/contact">
                         <img src="assets/images/client-logos/client-logo3.png" alt="Client Logo">
                     </a>
-                    <a class="client-logo-item wow fadeInUp delay-0-5s" href="{{ url('contact') }}">
+                    <a class="client-logo-item wow fadeInUp delay-0-5s" href="http://localhost:8000/contact">
                         <img src="assets/images/client-logos/client-logo4.png" alt="Client Logo">
                     </a>
-                    <a class="client-logo-item wow fadeInUp delay-0-6s" href="{{ url('contact') }}">
+                    <a class="client-logo-item wow fadeInUp delay-0-6s" href="http://localhost:8000/contact">
                         <img src="assets/images/client-logos/client-logo5.png" alt="Client Logo">
                     </a>
-                    <a class="client-logo-item wow fadeInUp delay-0-2s" href="{{ url('contact') }}">
+                    <a class="client-logo-item wow fadeInUp delay-0-2s" href="http://localhost:8000/contact">
                         <img src="assets/images/client-logos/client-logo6.png" alt="Client Logo">
                     </a>
-                    <a class="client-logo-item wow fadeInUp delay-0-3s" href="{{ url('contact') }}">
+                    <a class="client-logo-item wow fadeInUp delay-0-3s" href="http://localhost:8000/contact">
                         <img src="assets/images/client-logos/client-logo7.png" alt="Client Logo">
                     </a>
-                    <a class="client-logo-item wow fadeInUp delay-0-4s" href="{{ url('contact') }}">
+                    <a class="client-logo-item wow fadeInUp delay-0-4s" href="http://localhost:8000/contact">
                         <img src="assets/images/client-logos/client-logo8.png" alt="Client Logo">
                     </a>
-                    <a class="client-logo-item wow fadeInUp delay-0-5s" href="{{ url('contact') }}">
+                    <a class="client-logo-item wow fadeInUp delay-0-5s" href="http://localhost:8000/contact">
                         <img src="assets/images/client-logos/client-logo9.png" alt="Client Logo">
                     </a>
-                    <a class="client-logo-item wow fadeInUp delay-0-6s" href="{{ url('contact') }}">
+                    <a class="client-logo-item wow fadeInUp delay-0-6s" href="http://localhost:8000/contact">
                         <img src="assets/images/client-logos/client-logo10.png" alt="Client Logo">
                     </a>
                 </div>
@@ -1202,7 +1225,7 @@
                         <div class="col-lg-2 col-md-12">
                             <div class="footer-widget widget_logo wow fadeInUp delay-0-2s">
                                 <div class="footer-logo">
-                                    <a href="{{ url('/') }}"><img src="{{ asset('assets/images/logos/logo.png') }}" alt="Logo"></a>
+                                    <a href="http://localhost:8000"><img src="http://localhost:8000/assets/images/logos/logo.png" alt="Logo"></a>
                                 </div>
                             </div>
                         </div>
@@ -1210,9 +1233,9 @@
                             <div class="footer-widget widget_nav_menu wow fadeInUp delay-0-4s">
                                 <h6 class="footer-title">Quick Link</h6>
                                 <ul>
-                                    <li><a href="{{ url('services') }}">Services</a></li>
-                                    <li><a href="{{ url('about') }}">About</a></li>
-                                    <li><a href="{{ url('contact') }}">Contact</a></li>
+                                    <li><a href="http://localhost:8000/services">Services</a></li>
+                                    <li><a href="http://localhost:8000/about">About</a></li>
+                                    <li><a href="http://localhost:8000/contact">Contact</a></li>
                                 </ul>
                             </div>
                             <div class="footer-widget widget_newsletter wow fadeInUp delay-0-4s">
@@ -1241,7 +1264,7 @@
                    <div class="row">
                        <div class="col-lg-6">
                             <div class="copyright-text">
-                                <p>Copyright @2025, <a href="{{ url('/') }}">Ammar's Portfolio</a> All Rights Reserved</p>
+                                <p>Copyright @2025, <a href="http://localhost:8000">Ammar's Portfolio</a> All Rights Reserved</p>
                             </div>
                        </div>
                        <div class="col-lg-6 text-lg-end">
@@ -1267,4 +1290,30 @@
     </div>
 </div>
 
-@endsection
+
+    <!-- Jquery -->
+    <script src="http://localhost:8000/assets/js/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="http://localhost:8000/assets/js/bootstrap.min.js"></script>
+    <!-- Appear Js -->
+    <script src="http://localhost:8000/assets/js/appear.min.js"></script>
+    <!-- Slick -->
+    <script src="http://localhost:8000/assets/js/slick.min.js"></script>
+    <!-- Nice Select -->
+    <script src="http://localhost:8000/assets/js/jquery.nice-select.min.js"></script>
+    <!-- Image Loader -->
+    <script src="http://localhost:8000/assets/js/imagesloaded.pkgd.min.js"></script>
+    <!-- Isotope -->
+    <script src="http://localhost:8000/assets/js/isotope.pkgd.min.js"></script>
+    <!-- WOW Animation -->
+    <script src="http://localhost:8000/assets/js/wow.min.js"></script>
+    <!-- Custom script -->
+    <script src="http://localhost:8000/assets/js/script.js"></script>
+
+    <!-- For Contact Form -->
+    <script src="http://localhost:8000/assets/js/jquery.ajaxchimp.min.js"></script>
+    <script src="http://localhost:8000/assets/js/form-validator.min.js"></script>
+    <script src="http://localhost:8000/assets/js/contact-form-script.js"></script>
+    <script src="http://localhost:8000/assets/js/magnific-popup.min.js"></script>
+</body>
+</html>

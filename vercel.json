@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "routes": [
+    { "src": "/about", "dest": "/about.html" },
+    { "src": "/contact", "dest": "/contact.html" },
+    { "src": "/services", "dest": "/services.html" },
+    { "src": "/(.*)", "dest": "/$1" }
+  ]
+}
