@@ -401,7 +401,7 @@
                         <h4>Full-Stack Web Development</h4>
                         <p>End-to-end web solutions using Laravel, PHP, React, and MySQL for scalable, secure, and modern applications.</p>
                     </div>
-                    <a href="service-details.html" class="details-btn"><i class="fas fa-arrow-right"></i></a>
+                    <a href="{{ url('services') }}" class="details-btn"><i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -411,7 +411,7 @@
                         <h4>Frontend Development</h4>
                         <p>Responsive, user-friendly interfaces with React, Bootstrap, Tailwind CSS, Vue.js, JavaScript, HTML, and CSS to deliver engaging digital experiences.</p>
                     </div>
-                    <a href="service-details.html" class="details-btn"><i class="fas fa-arrow-right"></i></a>
+                    <a href="{{ url('services') }}" class="details-btn"><i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -421,7 +421,7 @@
                         <h4>Backend Development</h4>
                         <p>Robust backend systems using Laravel, PHP, and MySQL with REST APIs for secure and efficient data handling.</p>
                     </div>
-                    <a href="service-details.html" class="details-btn"><i class="fas fa-arrow-right"></i></a>
+                    <a href="{{ url('services') }}" class="details-btn"><i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -431,7 +431,7 @@
                         <h4>Agile Software Engineering</h4>
                         <p>Delivering high-quality projects through Agile methodologies, SDLC practices, and continuous integration.</p>
                     </div>
-                    <a href="service-details.html" class="details-btn"><i class="fas fa-arrow-right"></i></a>
+                    <a href="{{ url('services') }}" class="details-btn"><i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -441,7 +441,7 @@
     <p>Automated testing with PEST for reliable Laravel applications, and scalable cloud solutions using AWS for secure deployments.</p>
 </div>
 
-                    <a href="service-details.html" class="details-btn"><i class="fas fa-arrow-right"></i></a>
+                    <a href="{{ url('services') }}" class="details-btn"><i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -451,7 +451,7 @@
                         <h4>Database Design & Management</h4>
                         <p>Optimized SQL databases with efficient schema design, queries, and integrations for data-driven applications.</p>
                     </div>
-                    <a href="service-details.html" class="details-btn"><i class="fas fa-arrow-right"></i></a>
+                    <a href="{{ url('services') }}" class="details-btn"><i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <!-- AI Services -->
@@ -462,7 +462,7 @@
                         <h4>AI Model Training & Fine-tuning</h4>
                         <p>Custom machine learning model training using TensorFlow and PyTorch for your specific use cases, with optimization and deployment support.</p>
                     </div>
-                    <a href="service-details.html" class="details-btn"><i class="fas fa-arrow-right"></i></a>
+                    <a href="{{ url('services') }}" class="details-btn"><i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -472,7 +472,7 @@
                         <h4>Computer Vision Integration</h4>
                         <p>Image processing and real-time vision solutions using OpenCV. Build powerful visual recognition and analysis systems.</p>
                     </div>
-                    <a href="service-details.html" class="details-btn"><i class="fas fa-arrow-right"></i></a>
+                    <a href="{{ url('services') }}" class="details-btn"><i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -482,7 +482,7 @@
                         <h4>Face Recognition Systems</h4>
                         <p>Biometric authentication and identification systems. Implement advanced face detection, recognition, and verification features.</p>
                     </div>
-                    <a href="service-details.html" class="details-btn"><i class="fas fa-arrow-right"></i></a>
+                    <a href="{{ url('services') }}" class="details-btn"><i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -492,7 +492,7 @@
                         <h4>Data Processing & Analysis</h4>
                         <p>Data pipeline creation and ML data preparation using NumPy and Pandas. Transform raw data into insights for machine learning.</p>
                     </div>
-                    <a href="service-details.html" class="details-btn"><i class="fas fa-arrow-right"></i></a>
+                    <a href="{{ url('services') }}" class="details-btn"><i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -502,7 +502,7 @@
                         <h4>AI-Powered Backend Integration</h4>
                         <p>Seamlessly integrate machine learning models into your web applications. Build intelligent backends with API endpoints for AI predictions.</p>
                     </div>
-                    <a href="service-details.html" class="details-btn"><i class="fas fa-arrow-right"></i></a>
+                    <a href="{{ url('services') }}" class="details-btn"><i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -743,9 +743,9 @@
                     <div class="col-xl-5 col-lg-6">
                         <div class="project-content wow fadeInRight delay-0-2s">
                             <span class="sub-title">Product Design</span>
-                            <h2><a href="project-details.html">Mobile Application Design</a></h2>
+                            <h2><a href="{{ url('services') }}">Mobile Application Design</a></h2>
                             <p>Sed ut perspiciatis unde omnin natus totam rem aperiam eaque inventore veritatis architecto beatae</p>
-                            <a href="project-details.html" class="details-btn"><i class="far fa-arrow-right"></i></a>
+                            <a href="{{ url('services') }}" class="details-btn"><i class="far fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -758,9 +758,9 @@
                     <div class="col-xl-5 col-lg-6 ms-auto">
                         <div class="project-content wow fadeInRight delay-0-2s">
                             <span class="sub-title">Product Design</span>
-                            <h2><a href="project-details.html">Website Makeup Design</a></h2>
+                            <h2><a href="{{ url('services') }}">Website Makeup Design</a></h2>
                             <p>Sed ut perspiciatis unde omnin natus totam rem aperiam eaque inventore veritatis architecto beatae</p>
-                            <a href="project-details.html" class="details-btn"><i class="far fa-arrow-right"></i></a>
+                            <a href="{{ url('services') }}" class="details-btn"><i class="far fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -773,9 +773,9 @@
                     <div class="col-xl-5 col-lg-6">
                         <div class="project-content wow fadeInRight delay-0-2s">
                             <span class="sub-title">Product Design</span>
-                            <h2><a href="project-details.html">Brand Identity and Motion Design</a></h2>
+                            <h2><a href="{{ url('services') }}">Brand Identity and Motion Design</a></h2>
                             <p>Sed ut perspiciatis unde omnin natus totam rem aperiam eaque inventore veritatis architecto beatae</p>
-                            <a href="project-details.html" class="details-btn"><i class="far fa-arrow-right"></i></a>
+                            <a href="{{ url('services') }}" class="details-btn"><i class="far fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -788,14 +788,14 @@
                     <div class="col-xl-5 col-lg-6 ms-auto">
                         <div class="project-content wow fadeInRight delay-0-2s">
                             <span class="sub-title">Product Design</span>
-                            <h2><a href="project-details.html">Mobile Application Development</a></h2>
+                            <h2><a href="{{ url('services') }}">Mobile Application Development</a></h2>
                             <p>Sed ut perspiciatis unde omnin natus totam rem aperiam eaque inventore veritatis architecto beatae</p>
-                            <a href="project-details.html" class="details-btn"><i class="far fa-arrow-right"></i></a>
+                            <a href="{{ url('services') }}" class="details-btn"><i class="far fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="project-btn text-center wow fadeInUp delay-0-2s">
-                    <a href="projects.html" class="theme-btn">View More Projects <i class="far fa-angle-right"></i></a>
+                    <a href="{{ url('services') }}" class="theme-btn">View More Projects <i class="far fa-angle-right"></i></a>
                 </div>
             </div>
             <div class="bg-lines">
@@ -913,7 +913,7 @@
                                     <li class="unable">Digital Marketing</li>
                                     <li class="unable">Custom Support</li>
                                 </ul>
-                                <a href="contact.html" class="theme-btn">Choose Package <i class="far fa-angle-right"></i></a>
+                                <a href="{{ url('contact') }}" class="theme-btn">Choose Package <i class="far fa-angle-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -933,7 +933,7 @@
                                     <li>Digital Marketing</li>
                                     <li>Custom Support</li>
                                 </ul>
-                                <a href="contact.html" class="theme-btn">Choose Package <i class="far fa-angle-right"></i></a>
+                                <a href="{{ url('contact') }}" class="theme-btn">Choose Package <i class="far fa-angle-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -953,7 +953,7 @@
                                     <li>Digital Marketing</li>
                                     <li>Custom Support</li>
                                 </ul>
-                                <a href="contact.html" class="theme-btn">Choose Package <i class="far fa-angle-right"></i></a>
+                                <a href="{{ url('contact') }}" class="theme-btn">Choose Package <i class="far fa-angle-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1102,10 +1102,10 @@
                                 </div>
                                 <div class="content">
                                     <div class="blog-meta mb-35">
-                                        <a class="tag" href="blog.html">Design</a>
-                                        <a class="tag" href="blog.html">Figma</a>
+                                        <a class="tag" href="{{ url('about') }}">Design</a>
+                                        <a class="tag" href="{{ url('about') }}">Figma</a>
                                     </div>
-                                    <h5><a href="blog-details.html">Tips For Conductin See Usability Studies</a></h5>
+                                    <h5><a href="{{ url('about') }}">Tips For Conductin See Usability Studies</a></h5>
                                     <hr>
                                     <div class="blog-meta mt-35">
                                         <a class="date" href="#"><i class="far fa-calendar-alt"></i> September 25, 2023</a>
@@ -1120,10 +1120,10 @@
                                 </div>
                                 <div class="content">
                                     <div class="blog-meta mb-35">
-                                        <a class="tag" href="blog.html">Design</a>
-                                        <a class="tag" href="blog.html">Figma</a>
+                                        <a class="tag" href="{{ url('about') }}">Design</a>
+                                        <a class="tag" href="{{ url('about') }}">Figma</a>
                                     </div>
-                                    <h5><a href="blog-details.html">Keyboard-Only Suppor Assistive Technology</a></h5>
+                                    <h5><a href="{{ url('about') }}">Keyboard-Only Suppor Assistive Technology</a></h5>
                                     <hr>
                                     <div class="blog-meta mt-35">
                                         <a class="date" href="#"><i class="far fa-calendar-alt"></i> September 25, 2023</a>
@@ -1155,34 +1155,34 @@
                     </div>
                 </div>
                 <div class="client-logo-wrap">
-                    <a class="client-logo-item wow fadeInUp delay-0-2s" href="contact.html">
+                    <a class="client-logo-item wow fadeInUp delay-0-2s" href="{{ url('contact') }}">
                         <img src="assets/images/client-logos/client-logo1.png" alt="Client Logo">
                     </a>
-                    <a class="client-logo-item wow fadeInUp delay-0-3s" href="contact.html">
+                    <a class="client-logo-item wow fadeInUp delay-0-3s" href="{{ url('contact') }}">
                         <img src="assets/images/client-logos/client-logo2.png" alt="Client Logo">
                     </a>
-                    <a class="client-logo-item wow fadeInUp delay-0-4s" href="contact.html">
+                    <a class="client-logo-item wow fadeInUp delay-0-4s" href="{{ url('contact') }}">
                         <img src="assets/images/client-logos/client-logo3.png" alt="Client Logo">
                     </a>
-                    <a class="client-logo-item wow fadeInUp delay-0-5s" href="contact.html">
+                    <a class="client-logo-item wow fadeInUp delay-0-5s" href="{{ url('contact') }}">
                         <img src="assets/images/client-logos/client-logo4.png" alt="Client Logo">
                     </a>
-                    <a class="client-logo-item wow fadeInUp delay-0-6s" href="contact.html">
+                    <a class="client-logo-item wow fadeInUp delay-0-6s" href="{{ url('contact') }}">
                         <img src="assets/images/client-logos/client-logo5.png" alt="Client Logo">
                     </a>
-                    <a class="client-logo-item wow fadeInUp delay-0-2s" href="contact.html">
+                    <a class="client-logo-item wow fadeInUp delay-0-2s" href="{{ url('contact') }}">
                         <img src="assets/images/client-logos/client-logo6.png" alt="Client Logo">
                     </a>
-                    <a class="client-logo-item wow fadeInUp delay-0-3s" href="contact.html">
+                    <a class="client-logo-item wow fadeInUp delay-0-3s" href="{{ url('contact') }}">
                         <img src="assets/images/client-logos/client-logo7.png" alt="Client Logo">
                     </a>
-                    <a class="client-logo-item wow fadeInUp delay-0-4s" href="contact.html">
+                    <a class="client-logo-item wow fadeInUp delay-0-4s" href="{{ url('contact') }}">
                         <img src="assets/images/client-logos/client-logo8.png" alt="Client Logo">
                     </a>
-                    <a class="client-logo-item wow fadeInUp delay-0-5s" href="contact.html">
+                    <a class="client-logo-item wow fadeInUp delay-0-5s" href="{{ url('contact') }}">
                         <img src="assets/images/client-logos/client-logo9.png" alt="Client Logo">
                     </a>
-                    <a class="client-logo-item wow fadeInUp delay-0-6s" href="contact.html">
+                    <a class="client-logo-item wow fadeInUp delay-0-6s" href="{{ url('contact') }}">
                         <img src="assets/images/client-logos/client-logo10.png" alt="Client Logo">
                     </a>
                 </div>
@@ -1206,7 +1206,7 @@
                         <div class="col-lg-2 col-md-12">
                             <div class="footer-widget widget_logo wow fadeInUp delay-0-2s">
                                 <div class="footer-logo">
-                                    <a href="index.html"><img src="assets/images/logos/logo.png" alt="Logo"></a>
+                                    <a href="{{ url('/') }}"><img src="{{ asset('assets/images/logos/logo.png') }}" alt="Logo"></a>
                                 </div>
                             </div>
                         </div>
@@ -1214,11 +1214,9 @@
                             <div class="footer-widget widget_nav_menu wow fadeInUp delay-0-4s">
                                 <h6 class="footer-title">Quick Link</h6>
                                 <ul>
-                                    <li><a href="#">Service</a></li>
-                                    <li><a href="#">Projects</a></li>
-                                    <li><a href="#">Pricing</a></li>
-                                    <li><a href="#">Faqs</a></li>
-                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="{{ url('services') }}">Services</a></li>
+                                    <li><a href="{{ url('about') }}">About</a></li>
+                                    <li><a href="{{ url('contact') }}">Contact</a></li>
                                 </ul>
                             </div>
                             <div class="footer-widget widget_newsletter wow fadeInUp delay-0-4s">
@@ -1247,15 +1245,12 @@
                    <div class="row">
                        <div class="col-lg-6">
                             <div class="copyright-text">
-                                <p>Copyright @2025, <a href="#">Ammar's Portfolio</a> All Rights Reserved</p>
+                                <p>Copyright @2025, <a href="{{ url('/') }}">Ammar's Portfolio</a> All Rights Reserved</p>
                             </div>
                        </div>
                        <div class="col-lg-6 text-lg-end">
                            <ul class="footer-bottom-nav">
-                               <li><a href="#">Facebook</a></li>
-                               <li><a href="#">Twitter</a></li>
-                               <li><a href="#">Instagram</a></li>
-                               <li><a href="#">LinkedIn</a></li>
+                               <li><a href="https://www.linkedin.com/in/ammar-khalid-15883b247" target="_blank">LinkedIn</a></li>
                            </ul>
                        </div>
                    </div>

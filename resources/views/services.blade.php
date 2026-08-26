@@ -1,6 +1,6 @@
 @extends('layouts.app') 
 
-@section('title', 'Services')  
+@section('content')  
 
 <div>
 
@@ -43,42 +43,9 @@
 
                     <div class="navbar-collapse collapse clearfix">
                         <ul class="navigation clearfix">
-                            <li class="dropdown"><a href="{{ url('/') }}">Home</a>
-                                <!-- <ul>
-                                    <li class="dropdown"><a href="#">MultiPage</a>
-                                        <ul>
-                                            <li><a href="{{ url('/') }}">Home One</a></li>
-                                            <li><a href="{{ url('index2') }}">Home Two</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown"><a href="#">OnePage</a>
-                                        <ul>
-                                            <li><a href="{{ url('indexonepage') }}">Home One</a></li>
-                                            <li><a href="{{ url('index2onepage') }}">Home Two</a></li>
-                                        </ul>
-                                    </li>
-                                </ul> -->
-                            </li>
+                            <li class="dropdown"><a href="{{ url('/') }}">Home</a></li>
                             <li><a href="{{ url('about') }}">about</a></li>
                             <li><a href="{{ url('services') }}">services</a></li>
-                            <!-- <li class="dropdown"><a href="#">projects</a>
-                                <ul>
-                                    <li><a href="{{ url('projects') }}">project Grid</a></li>
-                                    <li><a href="{{ url('projects-masonry') }}">projects masonry</a></li>
-                                    <li><a href="{{ url('project-details') }}">projects details</a></li>
-                                </ul>
-                            </li> -->
-                            <!-- <li class="dropdown"><a href="#">blog</a>
-                                <ul>
-                                    <li><a href="{{ url('blog') }}">blog standard</a></li>
-                                    <li><a href="{{ url('blog-details') }}">blog details</a></li>
-                                </ul>
-                            </li> -->
-                            <!-- <li class="dropdown"><a href="#">pages</a>
-                                <ul>
-                                    <li><a href="{{ url('404') }}">Error Page</a></li>
-                                </ul>
-                            </li> -->
                             <li><a href="{{ url('contact') }}">Contact</a></li>
                         </ul>
                     </div>
@@ -112,7 +79,7 @@
                     <h1 class="page-title wow fadeInUp delay-0-2s">Popular Service</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center wow fadeInUp delay-0-4s">
-                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item"><a href="{{ url('/') }}">Home</a></li>
                             <li class="breadcrumb-item active">Popular Service</li>
                         </ol>
                     </nav>
@@ -137,10 +104,10 @@
             <div class="col-lg-6">
                 <div class="what-i-do-images rmb-55 wow fadeInUp delay-0-2s">
                     <div class="first-image">
-                        <img src="assets/images/about/what-i-do1.png" alt="Web Development">
+                        <img src="{{ asset('assets/images/about/what-i-do1.png') }}" alt="Web Development">
                     </div>
                     <div class="last-image">
-                        <img src="assets/images/about/what-i-do2.png" alt="UI/UX Design">
+                        <img src="{{ asset('assets/images/about/what-i-do2.png') }}" alt="UI/UX Design">
                     </div>
                     <div class="icon first"><i class="flaticon-code"></i></div>
                     <div class="icon last"><i class="flaticon-design"></i></div>
@@ -208,7 +175,7 @@
                         <h4>Full-Stack Web Development</h4>
                         <p>End-to-end web solutions using Laravel, PHP, React, and MySQL for scalable, secure, and modern applications.</p>
                     </div>
-                    <a href="service-details.html" class="details-btn"><i class="fas fa-arrow-right"></i></a>
+                    <a href="{{ url('contact') }}" class="details-btn"><i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -218,7 +185,7 @@
                         <h4>Frontend Development</h4>
                         <p>Responsive, user-friendly interfaces with React, Bootstrap, Tailwind CSS, Vue.js, JavaScript, HTML, and CSS to deliver engaging digital experiences.</p>
                     </div>
-                    <a href="service-details.html" class="details-btn"><i class="fas fa-arrow-right"></i></a>
+                    <a href="{{ url('contact') }}" class="details-btn"><i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -228,7 +195,7 @@
                         <h4>Backend Development</h4>
                         <p>Robust backend systems using Laravel, PHP, and MySQL with REST APIs for secure and efficient data handling.</p>
                     </div>
-                    <a href="service-details.html" class="details-btn"><i class="fas fa-arrow-right"></i></a>
+                    <a href="{{ url('contact') }}" class="details-btn"><i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -238,7 +205,7 @@
                         <h4>Agile Software Engineering</h4>
                         <p>Delivering high-quality projects through Agile methodologies, SDLC practices, and continuous integration.</p>
                     </div>
-                    <a href="service-details.html" class="details-btn"><i class="fas fa-arrow-right"></i></a>
+                    <a href="{{ url('contact') }}" class="details-btn"><i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -249,7 +216,7 @@
     <p>Automated testing with PEST for reliable Laravel applications, and scalable cloud solutions using AWS for secure deployments.</p>
 </div>
 
-                    <a href="service-details.html" class="details-btn"><i class="fas fa-arrow-right"></i></a>
+                    <a href="{{ url('contact') }}" class="details-btn"><i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -259,7 +226,7 @@
                         <h4>Database Design & Management</h4>
                         <p>Optimized SQL databases with efficient schema design, queries, and integrations for data-driven applications.</p>
                     </div>
-                    <a href="service-details.html" class="details-btn"><i class="fas fa-arrow-right"></i></a>
+                    <a href="{{ url('contact') }}" class="details-btn"><i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -280,7 +247,7 @@
                         <div class="col-lg-2 col-md-12">
                             <div class="footer-widget widget_logo wow fadeInUp delay-0-2s">
                                 <div class="footer-logo">
-                                    <a href="index.html"><img src="assets/images/logos/logo.png" alt="Logo"></a>
+                                    <a href="{{ url('/') }}"><img src="{{ asset('assets/images/logos/logo.png') }}" alt="Logo"></a>
                                 </div>
                             </div>
                         </div>
@@ -288,11 +255,9 @@
                             <div class="footer-widget widget_nav_menu wow fadeInUp delay-0-4s">
                                 <h6 class="footer-title">Quick Link</h6>
                                 <ul>
-                                    <li><a href="#">Service</a></li>
-                                    <li><a href="#">Projects</a></li>
-                                    <li><a href="#">Pricing</a></li>
-                                    <li><a href="#">Faqs</a></li>
-                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="{{ url('services') }}">Services</a></li>
+                                    <li><a href="{{ url('about') }}">About</a></li>
+                                    <li><a href="{{ url('contact') }}">Contact</a></li>
                                 </ul>
                             </div>
                             <div class="footer-widget widget_newsletter wow fadeInUp delay-0-4s">
@@ -308,8 +273,8 @@
                                 <h6 class="footer-title">Address</h6>
                                 <ul>
                                     <li><i class="far fa-map-marker-alt"></i>Pakistan</li>
-                                    <li><i class="far fa-envelope"></i> <a href="mailto:support@gmail.com">ammarmalik046@gmail.com</a></li>
-                                    <li><i class="far fa-phone"></i> <a href="callto:+880(123)45688">+923345865096</a></li>
+                                    <li><i class="far fa-envelope"></i> <a href="mailto:ammarmalik046@gmail.com">ammarmalik046@gmail.com</a></li>
+                                    <li><i class="far fa-phone"></i> <a href="tel:+923345865096">+923345865096</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -321,15 +286,12 @@
                    <div class="row">
                        <div class="col-lg-6">
                             <div class="copyright-text">
-                                <p>Copyright @2025, <a href="#">Ammar's Portfolio</a> All Rights Reserved</p>
+                                <p>Copyright @2025, <a href="{{ url('/') }}">Ammar's Portfolio</a> All Rights Reserved</p>
                             </div>
                        </div>
                        <div class="col-lg-6 text-lg-end">
                            <ul class="footer-bottom-nav">
-                               <li><a href="#">Facebook</a></li>
-                               <li><a href="#">Twitter</a></li>
-                               <li><a href="#">Instagram</a></li>
-                               <li><a href="#">LinkedIn</a></li>
+                               <li><a href="https://www.linkedin.com/in/ammar-khalid-15883b247" target="_blank">LinkedIn</a></li>
                            </ul>
                        </div>
                    </div>

@@ -43,42 +43,9 @@
 
                     <div class="navbar-collapse collapse clearfix">
                         <ul class="navigation clearfix">
-                            <li class="dropdown"><a href="{{ url('/') }}">Home</a>
-                                <!-- <ul>
-                                    <li class="dropdown"><a href="#">MultiPage</a>
-                                        <ul>
-                                            <li><a href="{{ url('/') }}">Home One</a></li>
-                                            <li><a href="{{ url('index2') }}">Home Two</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown"><a href="#">OnePage</a>
-                                        <ul>
-                                            <li><a href="{{ url('indexonepage') }}">Home One</a></li>
-                                            <li><a href="{{ url('index2onepage') }}">Home Two</a></li>
-                                        </ul>
-                                    </li>
-                                </ul> -->
-                            </li>
+                            <li class="dropdown"><a href="{{ url('/') }}">Home</a></li>
                             <li><a href="{{ url('about') }}">about</a></li>
                             <li><a href="{{ url('services') }}">services</a></li>
-                            <li class="dropdown"><a href="#">projects</a>
-                                <ul>
-                                    <li><a href="{{ url('projects') }}">project Grid</a></li>
-                                    <li><a href="{{ url('projects-masonry') }}">projects masonry</a></li>
-                                    <li><a href="{{ url('project-details') }}">projects details</a></li>
-                                </ul>
-                            </li>
-                            <!-- <li class="dropdown"><a href="#">blog</a>
-                                <ul>
-                                    <li><a href="{{ url('blog') }}">blog standard</a></li>
-                                    <li><a href="{{ url('blog-details') }}">blog details</a></li>
-                                </ul>
-                            </li> -->
-                            <!-- <li class="dropdown"><a href="#">pages</a>
-                                <ul>
-                                    <li><a href="{{ url('404') }}">Error Page</a></li>
-                                </ul>
-                            </li> -->
                             <li><a href="{{ url('contact') }}">Contact</a></li>
                         </ul>
                     </div>
@@ -117,15 +84,16 @@
 
                 <!--Appointment Form-->
                 <div class="appointment-form">
-                    <form method="post" action="https://html.webtend.net/noxfolio/contact.html">
+                    <form method="post" action="{{ route('send.appointment') }}">
+                        @csrf
                         <div class="form-group">
-                            <input type="text" name="text" value="" placeholder="Name" required>
+                            <input type="text" name="name" value="" placeholder="Name" required>
                         </div>
                         <div class="form-group">
                             <input type="email" name="email" value="" placeholder="Email Address" required>
                         </div>
                         <div class="form-group">
-                            <textarea placeholder="Message" rows="5"></textarea>
+                            <textarea name="message" placeholder="Message" rows="5" required></textarea>
                         </div>
                         <div class="form-group">
                             <button type="submit" class="theme-btn">Submit now</button>
@@ -135,10 +103,7 @@
 
                 <!--Social Icons-->
                 <div class="social-style-one">
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="https://www.linkedin.com/in/ammar-khalid-15883b247" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
         </section>
@@ -152,7 +117,7 @@
                     <h1 class="page-title wow fadeInUp delay-0-2s">Reach Out </h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center wow fadeInUp delay-0-4s">
-                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item"><a href="{{ url('/') }}">Home</a></li>
                             <li class="breadcrumb-item active">Contact</li>
                         </ol>
                     </nav>
@@ -172,6 +137,19 @@
         <!-- Contact Page Area start -->
         <section class="contact-page pt-40 pb-130 rpb-100 rel z-1">
             <div class="container">
+                @if (session('success'))
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        {{ session('success') }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                @endif
+                @if (session('error'))
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        {{ session('error') }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                @endif
+
                 <div class="row align-items-center">
                     <div class="col-lg-4">
                         <div class="contact-page-content rmb-55 wow fadeInUp delay-0-2s">
@@ -183,28 +161,26 @@
                             <h6>Main Office</h6>
                             <div class="widget_contact_info mb-35">
                                 <ul>
-                                    <li><i class="far fa-map-marker-alt"></i> Abbotabad<br> Pakistan</li>
-                                    <li><i class="far fa-envelope"></i> <a href="mailto:support@gmail.com">ammarmalik046@gmail.com</a></li>
-                                    <li><i class="far fa-phone"></i> <a href="callto:+880(123)45688">923345865096</a></li>
+                                    <li><i class="far fa-map-marker-alt"></i> Abbottabad<br> Pakistan</li>
+                                    <li><i class="far fa-envelope"></i> <a href="mailto:ammarmalik046@gmail.com">ammarmalik046@gmail.com</a></li>
+                                    <li><i class="far fa-phone"></i> <a href="tel:+923345865096">+923345865096</a></li>
                                 </ul>
                             </div>
                             <h5>Follow Me</h5>
                             <div class="social-style-one mt-10">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/ammar-khalid-15883b247" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-8">
                         <div class="contact-page-form contact-form form-style-one wow fadeInUp delay-0-2s">
-                            <form id="contactForm" class="contactForm" name="contactForm" action="https://html.webtend.net/noxfolio/assets/php/form-process.php" method="post">
+                            <form id="contactForm" class="contactForm" name="contactForm" action="{{ route('send.contact') }}" method="post">
+                                @csrf
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="name">Full Name</label>
-                                            <input type="text" id="name" name="name" class="form-control" value="" placeholder="Richard D. Hammond" required data-error="Please enter your Name">
+                                            <input type="text" id="name" name="name" class="form-control" value="" placeholder="Your Full Name" required data-error="Please enter your Name">
                                             <label for="name" class="for-icon"><i class="far fa-user"></i></label>
                                             <div class="help-block with-errors"></div>
                                         </div>
@@ -212,7 +188,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="email">Email Address</label>
-                                            <input type="email" id="email" name="email" class="form-control" value="" placeholder="support@gmail.com" required data-error="Please enter your Email">
+                                            <input type="email" id="email" name="email" class="form-control" value="" placeholder="yourname@gmail.com" required data-error="Please enter your Email">
                                             <label for="email" class="for-icon"><i class="far fa-envelope"></i></label>
                                             <div class="help-block with-errors"></div>
                                         </div>
@@ -220,7 +196,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="phone_number">Phone Number</label>
-                                            <input type="text" id="phone_number" name="phone_number" class="form-control" value="" placeholder="+880 (123) 456 88" required data-error="Please enter your Phone Number">
+                                            <input type="text" id="phone_number" name="phone_number" class="form-control" value="" placeholder="+923345865096" required data-error="Please enter your Phone Number">
                                             <label for="phone_number" class="for-icon"><i class="far fa-phone"></i></label>
                                             <div class="help-block with-errors"></div>
                                         </div>
@@ -236,7 +212,7 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="message">Message</label>
-                                            <textarea name="message" id="message" class="form-control" rows="4" placeholder="write message" required data-error="Please enter your Message"></textarea>
+                                            <textarea name="message" id="message" class="form-control" rows="4" placeholder="Write message" required data-error="Please enter your Message"></textarea>
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
@@ -263,17 +239,6 @@
         <!-- Contact Page Area end -->
         
         
-        <!-- Location Map Area Start -->
-        <!-- <div class="contact-page-map pb-120 rpb-90 wow fadeInUp delay-0-2s">
-            <div class="container">
-                <div class="our-location">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m12!1m10!1m3!1d142190.2862584524!2d-74.01298319978558!3d40.721725351435126!2m1!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sbd!4v1663473911885!5m2!1sen!2sbd" style="border:0; width: 100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
-        </div> -->
-        <!-- Location Map Area End -->
-        
-        
         <!-- footer area start -->
         <footer class="main-footer rel z-1">
             <div class="footer-top-wrap bgc-black pt-100 pb-75">
@@ -281,23 +246,10 @@
                     <div class="row">
                         <div class="col-lg-2 col-md-12">
                             <div class="footer-widget widget_logo wow fadeInUp delay-0-2s">
-                                <!-- <div class="footer-logo">
-                                    <a href="index.html"><img src="assets/images/logos/logo.png" alt="Logo"></a>
-                                </div> -->
                                 <h2>Portfolio</h2>
                             </div>
                         </div>
                         <div class="col-lg-7 col-md-7">
-                            <!-- <div class="footer-widget widget_nav_menu wow fadeInUp delay-0-4s">
-                                <h6 class="footer-title">Quick Link</h6>
-                                <ul>
-                                    <li><a href="services.html">Service</a></li>
-                                    <li><a href="projects.html">Projects</a></li>
-                                    <li><a href="services.html#pricing">Pricing</a></li>
-                                    <li><a href="about.html#faqs">Faqs</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
-                                </ul>
-                            </div> -->
                             <div class="footer-widget widget_newsletter wow fadeInUp delay-0-4s">
                                 <form action="#">
                                     <label for="email-address"><i class="far fa-envelope"></i></label>
@@ -311,8 +263,8 @@
                                 <h6 class="footer-title">Address</h6>
                                 <ul>
                                     <li><i class="far fa-map-marker-alt"></i> Pakistan</li>
-                                    <li><i class="far fa-envelope"></i> <a href="mailto:support@gmail.com">ammarmalik046@gmail.com</a></li>
-                                    <li><i class="far fa-phone"></i> <a href="callto:+880(123)45688">+923345865096</a></li>
+                                    <li><i class="far fa-envelope"></i> <a href="mailto:ammarmalik046@gmail.com">ammarmalik046@gmail.com</a></li>
+                                    <li><i class="far fa-phone"></i> <a href="tel:+923345865096">+923345865096</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -329,12 +281,7 @@
                        </div>
                        <div class="col-lg-6 text-lg-end">
                            <ul class="footer-bottom-nav">
-                               <li><a href="#">Facebook</a></li>
-                               <li><a href="#">Twitter</a></li>
-                               <li><a href="#">Instagram</a></li>
-                               <li><a href="{{ url('www.linkedin.com/in/ammar-khalid-15883b247
-
-') }}">>LinkedIn</a></li>
+                               <li><a href="https://www.linkedin.com/in/ammar-khalid-15883b247" target="_blank">LinkedIn</a></li>
                            </ul>
                        </div>
                    </div>

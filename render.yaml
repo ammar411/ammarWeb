@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: laravel-app
+    name: ammar-portfolio
     runtime: docker
     region: oregon
     plan: free
@@ -9,7 +9,7 @@ services:
     maxInstanceCount: 1
     minInstanceCount: 1
 
-    # Environment variables (set the secret values in Render dashboard)
+    # Environment variables (set APP_KEY in Render dashboard)
     envVars:
       - key: APP_ENV
         value: production
@@ -17,22 +17,10 @@ services:
         value: "false"
       - key: LOG_CHANNEL
         value: stderr
-      - key: APP_KEY
-        value: "" # set this in Render (use `php artisan key:generate --show` locally to get one)
       - key: DB_CONNECTION
-        value: mysql
-      - key: DB_HOST
-        value: "" # Aiven host (set in Render)
-      - key: DB_PORT
-        value: "3306"
+        value: sqlite
       - key: DB_DATABASE
-        value: "" # Aiven database name
-      - key: DB_USERNAME
-        value: "" # Aiven username
-      - key: DB_PASSWORD
-        value: "" # Aiven password (mark as secret in Render)
-      - key: MYSQL_ATTR_SSL_CA
-        value: "" # optional: paste Aiven CA cert contents or leave empty (we disabled verify in config)
+        value: /var/www/html/database/database.sqlite
 
     # Port configuration for Render
     port: 8080
@@ -40,7 +28,4 @@ services:
     # Auto-deploy on push
     deploy:
       fromRepo:
-        branch: main  # Change to your main branch name
-
-  # No managed database configured here since you're using Aiven MySQL. Configure Aiven
-  # connection details as environment variables above in the Render dashboard.
+        branch: main
