@@ -178,7 +178,7 @@
                     <p>"Turning ideas into scalable and user-friendly applications."</p>
                     <div class="hero-btns">
                         <a href="{{ url('contact') }}" class="theme-btn">Hire Me <i class="far fa-angle-right"></i></a>
-                        <a href="{{ url('contact') }}" class="read-more">Download Resume <i class="far fa-angle-right"></i></a>
+                        <a href="{{ asset('assets/Ammar_Khalid_Resume.pdf') }}" download="Ammar_Khalid_Resume.pdf" target="_blank" class="read-more">Download Resume <i class="far fa-angle-right"></i></a>
                     </div>
                 </div>
             </div>
